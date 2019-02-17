@@ -1,0 +1,11 @@
+{
+    "name": "xuheng/baidu-api",
+    "description": "baidu搜图api",
+    "authors": [
+        {
+            "name": "许许恒",
+            "email": "1197256140@qq.com"
+        }
+    ],
+    "require": {}
+}
