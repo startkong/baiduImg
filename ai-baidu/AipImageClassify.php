@@ -72,6 +72,12 @@ class AipImageClassify extends AipBase {
      */
     private $objectDetectUrl = 'https://aip.baidubce.com/rest/2.0/image-classify/v1/object_detect';
 
+    /**
+     * 地标识别 landmark api url
+     * @var string
+     */
+    private $landmarkUrl = 'https://aip.baidubce.com/rest/2.0/image-classify/v1/landmark';
+
     
 
     /**
@@ -275,5 +281,24 @@ class AipImageClassify extends AipBase {
         $data = array_merge($data, $options);
 
         return $this->request($this->objectDetectUrl, $data);
+    }
+
+    /**
+     * 地标识别接口
+     *
+     * @param string $image - 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式
+     * @param array $options - 可选参数对象，key: value都为string类型
+     * @description options列表:
+     * @return array
+     */
+    public function landmark($image, $options=array()){
+
+        $data = array();
+        
+        $data['image'] = base64_encode($image);
+
+        $data = array_merge($data, $options);
+
+        return $this->request($this->landmarkUrl, $data);
     }
 }
