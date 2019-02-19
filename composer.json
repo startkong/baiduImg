@@ -11,6 +11,17 @@
         "php": ">=5.3.0"
     },
     "autoload": {
-        "files": ["ai-baidu/AipImageClassify.php"]
+        "files": [
+            "ai-baidu/AipBodyAnalysis.php",
+            "ai-baidu/AipContentCensor.php",
+            "ai-baidu/AipFace.php",
+            "ai-baidu/AipImageCensor.php",
+            "ai-baidu/AipImageClassify.php",
+            "ai-baidu/AipImageSearch.php",
+            "ai-baidu/AipKg.php",
+            "ai-baidu/AipNlp.php",
+            "ai-baidu/AipOcr.php",
+            "ai-baidu/AipSpeech.php"
+        ]
     }
 }
